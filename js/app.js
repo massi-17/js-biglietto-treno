@@ -8,18 +8,18 @@
 
 
 let km = prompt('Quanti chilometri devi percorrere?') * 1;
+while (km == null || /\D/.test(km) || km == "") {
+    km = prompt("Inserisci un valore valido: ");
+};
 
-const anni = prompt('Quanti anni hai?') * 1;
-console.log(anni);
+let anni = prompt('Quanti anni hai?') * 1;
+while (anni == null || /\D/.test(anni) || anni == "") {
+    anni = prompt("Inserisci un valore valido: ");
+};
 
 const prezzoKm = 0.21;
 
 let prezzoBase = (km * prezzoKm) * 1;
-
-let message
-
-
-
 
 if (anni <= 0) {
     alert("Valore non accettato");
@@ -40,6 +40,4 @@ let risultato = 'Devi pagare ' + totale.toFixed(2);
 alert(risultato);
 
 
-
-console.log(totale);
 document.getElementById('totale_prezzo').innerHTML += totale.toFixed(2);
