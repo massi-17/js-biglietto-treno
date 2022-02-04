@@ -6,7 +6,7 @@
 
 body {
     background-image: url('https://www.pinclipart.com/picdir/big/197-1970912_clip-art-ski-lift.png');
-    background-size: 20%;
+    background-size: 10%;
     background-color: greenyellow;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -19,6 +19,7 @@ body {
     transform: translate(-50%, -50%);
     background-color: black;  
     width: 70%;
+    max-width: 700px;
     height: 30%;
     border: 5px solid white;
     border-radius: 30px;
