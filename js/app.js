@@ -21,8 +21,13 @@ let message
 
 
 
-
-if (anni < 18) {
+if (anni <= 0) {
+    alert("Valore non accettato");
+    location.reload();
+} else if (anni >= 150) {
+    alert("Valore non accettato");
+    location.reload();
+} else if (anni < 18) {
     totale = prezzoBase - ((prezzoBase * 20) / 100);
 } else if (anni >= 65) {
     totale = prezzoBase - ((prezzoBase * 40) / 100);
@@ -30,9 +35,11 @@ if (anni < 18) {
     totale = prezzoBase;
 }
 
+let risultato = 'Devi pagare ' + totale.toFixed(2);
+
+alert(risultato);
 
 
 
 console.log(totale);
-totale = totale.toFixed(2);
-document.getElementById('totale_prezzo').innerHTML += totale;
+document.getElementById('totale_prezzo').innerHTML += totale.toFixed(2);
